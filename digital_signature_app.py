@@ -1,8 +1,7 @@
 from flask import Flask, render_template, request, send_file
-from cryptography.hazmat.primitives import serialization
+from cryptography.hazmat.primitives import serialization, hashes
 from cryptography.hazmat.primitives.asymmetric import padding
 from cryptography.hazmat.backends import default_backend
-from cryptography.hazmat.primitives import hashes
 
 app = Flask(__name__)
 
