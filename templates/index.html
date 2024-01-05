@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Data Encryption and Decryption</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input, textarea {
+            margin-bottom: 10px;
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Encryption and Decryption</h1>
+
+    <form action="/sign" method="post">
+        <label for="message">Message to Sign:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+        <button type="submit">Sign Message</button>
+    </form>
+
+    <form action="/verify" method="post">
+        <label for="messageVerify">Message to Verify:</label>
+        <textarea id="messageVerify" name="message" rows="4" required></textarea>
+        <label for="signature">Signature:</label>
+        <input type="text" id="signature" name="signature" required>
+        <button type="submit">Verify Signature</button>
+    </form>
+
+    <form action="/encrypt" method="post">
+        <label for="messageEncrypt">Message to Encrypt:</label>
+        <textarea id="messageEncrypt" name="message" rows="4" required></textarea>
+        <button type="submit">Encrypt Message</button>
+    </form>
+
+    <form action="/decrypt" method="post">
+        <label for="ciphertext">Ciphertext to Decrypt:</label>
+        <input type="text" id="ciphertext" name="ciphertext" required>
+        <button type="submit">Decrypt Ciphertext</button>
+    </form>
+
+    <div class="result">
+        {% if result %}
+            Result: {{ result }}
+        {% endif %}
+    </div>
+</body>
+</html>

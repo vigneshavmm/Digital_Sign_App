@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signature Result</title>
+    <style>
+        body {
+            font-family: 'Times New Roman';
+            margin: 20px;
+        }
+
+        h1 {
+            color: #007bff;
+        }
+        h2 {
+            color: #28a745;
+        }
+    </style>
+</head>
+<body>
+    <center><h1> Signed Successfully</h1>
+    <h2>Document Preview:</h2>
+    <textarea rows="25" cols="100" readonly>{{ signed_document.document_content }}</textarea>
+    <h2>Digital Signature:</h2>
+    <textarea rows="10" cols="50" readonly>{{ signed_document.signature }}</textarea></center>
+</body>
+</html>
