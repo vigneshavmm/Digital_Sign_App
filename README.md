@@ -8,8 +8,8 @@ This Flask web service allows users to upload a file, sign it using an RSA priva
 ## Getting Started
 
 1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/file-signing-web-service.git
+   
+   git clone : https://github.com/your-username/file-signing-web-service.git
    ```
 
 2. Install dependencies:
